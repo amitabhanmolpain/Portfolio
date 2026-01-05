@@ -12,7 +12,7 @@ export function HeroSection() {
   const descRef = useRef<HTMLParagraphElement>(null)
   const actionsRef = useRef<HTMLDivElement>(null)
 
-  const roles = ["Backend Developer", "Fullstack Developer", "Learning Microservices"]
+  const roles = ["Backend Developer", "Fullstack Developer", "Microservices"]
   const [roleIndex, setRoleIndex] = useState(0)
   const [currentText, setCurrentText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
@@ -75,13 +75,13 @@ export function HeroSection() {
           </p>
 
           <div ref={actionsRef} className="flex flex-col gap-6 pt-4">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 flex-wrap">
               <div className="h-[1px] flex-1 bg-border/50 max-w-[100px]" />
-              <span className="text-xs font-bold text-muted-foreground uppercase tracking-[0.3em]">Keep in touch</span>
+              <span className="text-xs font-bold text-muted-foreground uppercase tracking-[0.3em] whitespace-nowrap">Keep in touch</span>
               <div className="h-[1px] flex-1 bg-border/50 max-w-[100px]" />
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 flex-wrap">
               <a
                 href="https://github.com"
                 target="_blank"

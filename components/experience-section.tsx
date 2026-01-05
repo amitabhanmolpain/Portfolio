@@ -9,11 +9,25 @@ gsap.registerPlugin(ScrollTrigger)
 
 const experiences = [
   {
+    company: "Hacktoberfest 2025",
+    role: "Open Source Contributor",
+    period: "October 2025 - November 2025",
+    description:
+      "Participated in Hacktoberfest 2025, contributing to open-source projects worldwide. Made 10+ pull requests and merge requests across various repositories, focusing on backend development, feature implementation, and bug fixes for maintainers' repositories.",
+    achievements: [
+      "Successfully merged 10+ PRs/MRs across multiple open-source projects, demonstrating versatility in different tech stacks.",
+      "Contributed to backend development, implementing new features and API endpoints for production applications.",
+      "Fixed critical bugs and improved code quality in maintainers' repositories, enhancing overall project stability.",
+      "Collaborated with global developers, following best practices for code review and documentation.",
+    ],
+    logo: "https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbWZqc20wZGowMDAwaTUwNHVtb2lndTJuIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=",
+  },
+  {
     company: "Bolt Hackathon",
-    role: "Hackathon Participant (Solo Build)",
+    role: "Bolt World Largest Vibecoding Hackathon",
     period: "June 2025 - August 2025",
     description:
-      "Participated in Bolt, the world's largest vibe coding hackathon. Built a solo project focused on fraud detection for job portals.",
+      "Built an app for detecting fake jobs using machine learning models including regression modeling and random forest. Developed with Next.js, Tailwind CSS, and GSAP for smooth animations.",
     achievements: [
       "Engineered an automated system to detect fake job listings using pattern recognition and verification algorithms.",
       "Focused on creating a safer environment for job seekers within major job portals.",
@@ -57,7 +71,7 @@ export function ExperienceSection() {
           <div className="h-1 w-12 bg-primary rounded-full" />
         </div>
 
-        <div ref={containerRef} className="grid md:grid-cols-1 gap-8 max-w-3xl">
+        <div ref={containerRef} className="grid md:grid-cols-2 gap-8">
           {experiences.map((exp, i) => (
             <div
               key={i}
