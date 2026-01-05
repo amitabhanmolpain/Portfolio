@@ -24,7 +24,7 @@ const experiences = [
   },
   {
     company: "Bolt Hackathon",
-    role: "Bolt World Largest Vibecoding Hackathon",
+    role: "Bolt World's Largest Vibe Coding Hackathon",
     period: "June 2025 - August 2025",
     description:
       "Built an app for detecting fake jobs using machine learning models including regression modeling and random forest. Developed with Next.js, Tailwind CSS, and GSAP for smooth animations.",
