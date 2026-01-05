@@ -115,10 +115,10 @@ export function HeroSection() {
           <div className="absolute -inset-4 bg-primary/20 rounded-[4rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
           <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-[3.5rem] overflow-hidden border border-border bg-muted/20 shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
             <Image
-              src="/professional-portrait.png"
+              src="/boi.jpeg"
               alt="Amitabh Anmol Pain"
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              className="object-contain transition-transform duration-700 group-hover:scale-110"
               priority
             />
           </div>

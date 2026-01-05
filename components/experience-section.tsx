@@ -19,7 +19,7 @@ const experiences = [
       "Focused on creating a safer environment for job seekers within major job portals.",
     ],
     image: "/fake-job-detection-dashboard.jpg",
-    logo: "https://bolt.new/social_preview_index.jpg",
+    logo: "https://server.cloud-station.io/cloudstation/bold-new-logo-4519818aa650bd2b61e9e0d9f1ed522a.png",
   },
 ]
 
