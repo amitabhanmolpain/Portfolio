@@ -83,7 +83,7 @@ export function HeroSection() {
 
             <div className="flex gap-4 flex-wrap">
               <a
-                href="https://github.com"
+                href="https://github.com/amitabhanmolpain"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative p-4 rounded-2xl bg-muted/30 border border-border/50 hover:border-primary/50 transition-all duration-500 overflow-hidden"
@@ -92,7 +92,7 @@ export function HeroSection() {
                 <Github className="h-6 w-6 relative z-10 group-hover:text-primary transition-colors" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/amitabh-anmol-pain-118308309/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative p-4 rounded-2xl bg-muted/30 border border-border/50 hover:border-primary/50 transition-all duration-500 overflow-hidden"
@@ -101,7 +101,7 @@ export function HeroSection() {
                 <Linkedin className="h-6 w-6 relative z-10 group-hover:text-primary transition-colors" />
               </a>
               <a
-                href="mailto:hello@example.com"
+                href="mailto:ami05tabh@gmail.com"
                 className="group relative p-4 rounded-2xl bg-muted/30 border border-border/50 hover:border-primary/50 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
