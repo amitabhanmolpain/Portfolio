@@ -15,17 +15,13 @@ export function AboutSection() {
         <div className="grid md:grid-cols-3 gap-12 items-start">
           <div className="md:col-span-2 space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              I am a dedicated Backend Developer with a passion for building scalable and reliable systems. My expertise
-              lies in designing efficient database schemas, optimizing server performance, and ensuring the seamless
-              flow of data across complex architectures.
+              I am a backend-focused Computer Science undergraduate with strong hands-on experience in building scalable, data-driven applications. I work primarily with Python, Flask, FastAPI, Node.js, and MongoDB, and I enjoy designing APIs, handling databases, and integrating machine learning into real-world systems.
             </p>
             <p>
-              I believe that a strong foundation is key to any successful application. That&apos;s why I focus on clean
-              code, comprehensive testing, and security best practices from the very first line of code.
+              I have built and shipped multiple full-stack projects, including a fake and ghost job detection system developed during a global hackathon, where I implemented Random Forest and Logistic Regression models and connected them to a production-ready backend. As a solo developer and open-source contributor, I am comfortable owning end-to-end backend responsibilities—from API design and authentication to deployment and performance optimization.
             </p>
             <p>
-              Currently, I am diving deep into microservices architectures and distributed systems, exploring how to
-              build highly available and resilient services that can scale to millions of users.
+              I am particularly interested in backend systems, AI-powered applications, and scalable architectures, and I aim to grow into a backend engineer who builds reliable systems that solve meaningful problems.
             </p>
 
             <div className="pt-4">

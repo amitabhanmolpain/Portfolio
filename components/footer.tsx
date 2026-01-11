@@ -49,19 +49,19 @@ export function Footer() {
             <h4 className="text-xs font-black uppercase tracking-[0.3em] text-foreground/50">Connect</h4>
             <div className="flex flex-col gap-4">
               <a
-                href="mailto:hello@example.com"
+                href="mailto:ami05tabh@gmail.com"
                 className="group p-4 rounded-2xl bg-muted/30 border border-border/50 hover:border-primary/30 transition-all flex items-center justify-between"
               >
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                  <span className="font-medium">hello@example.com</span>
+                  <span className="font-medium">ami05tabh@gmail.com</span>
                 </div>
                 <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
               <div className="flex gap-4">
                 {[
-                  { icon: Github, label: "GitHub", href: "#" },
-                  { icon: Linkedin, label: "LinkedIn", href: "#" },
+                  { icon: Github, label: "GitHub", href: "https://github.com/amitabhanmolpain" },
+                  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/amitabh-anmol-pain-118308309/" },
                   { icon: Twitter, label: "Twitter", href: "#" },
                 ].map((social) => (
                   <a

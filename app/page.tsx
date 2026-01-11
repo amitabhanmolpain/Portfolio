@@ -7,29 +7,12 @@ import { AchievementsSection } from "@/components/achievements-section"
 import { Footer } from "@/components/footer" // Moving footer to its own component
 import { AboutSection } from "@/components/about-section"
 
-const projects = [
-  {
-    title: "Distributed Microservices Orchestrator",
-    description:
-      "A high-concurrency system built to handle millions of transactions per second, utilizing advanced caching and messaging patterns.",
-    tags: ["Node.js", "Redis", "Fullstack"],
-    image: "/server-architecture-diagram.jpg",
-  },
-  {
-    title: "Real-time Analytics Engine",
-    description:
-      "Built a streaming data pipeline that processes real-time user behavior data and provides sub-second query responses.",
-    tags: ["Python", "FastAPI", "Docker"],
-    image: "/data-dashboard-visualization.png",
-  },
-  {
-    title: "Secure Auth & IAM Gateway",
-    description:
-      "Implemented a custom Identity and Access Management system with OAuth2/OIDC protocols and multi-factor authentication.",
-    tags: ["Fullstack", "PostgreSQL", "Next.js"],
-    image: "/digital-security-lock.png",
-  },
-]
+const projects: Array<{
+  title: string
+  description: string
+  tags: string[]
+  image: string
+}> = []
 
 export default function Home() {
   return (
