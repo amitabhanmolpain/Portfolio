@@ -9,22 +9,10 @@ gsap.registerPlugin(ScrollTrigger)
 
 const achievements = [
   {
-    title: "Global Hackathon Winner",
-    org: "TechFest 2025",
-    icon: Trophy,
-    description: "First place for building a decentralized identity management system.",
-  },
-  {
-    title: "Top Contributor",
-    org: "Open Source Community",
-    icon: Star,
-    description: "Consistently ranked in the top 1% of contributors for major backend frameworks.",
-  },
-  {
-    title: "Performance Optimization Award",
-    org: "Previous Company",
+    title: "Artira Hackathon Finalist",
+    org: "Artira Hackathon",
     icon: Award,
-    description: "Recognized for reducing cloud infrastructure costs by 30% through system optimization.",
+    description: "Selected as a finalist for innovative solutions and technical excellence.",
   },
 ]
 
