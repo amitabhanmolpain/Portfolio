@@ -14,9 +14,10 @@ interface ProjectProps {
   tags: string[]
   image: string
   index: number
+  github?: string
 }
 
-export function ProjectCard({ title, description, tags, image, index }: ProjectProps) {
+export function ProjectCard({ title, description, tags, image, index, github }: ProjectProps) {
   const cardRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -49,9 +50,11 @@ export function ProjectCard({ title, description, tags, image, index }: ProjectP
           className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-          <div className="p-4 bg-background rounded-2xl hover:bg-primary transition-colors group/icon cursor-pointer">
-            <Github className="h-6 w-6 group-hover/icon:text-white" />
-          </div>
+          {github && (
+            <a href={github} target="_blank" rel="noopener noreferrer" className="p-4 bg-background rounded-2xl hover:bg-primary transition-colors group/icon cursor-pointer">
+              <Github className="h-6 w-6 group-hover/icon:text-white" />
+            </a>
+          )}
           <div className="p-4 bg-background rounded-2xl hover:bg-primary transition-colors group/icon cursor-pointer">
             <ExternalLink className="h-6 w-6 group-hover/icon:text-white" />
           </div>

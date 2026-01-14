@@ -42,12 +42,12 @@ export function AboutSection() {
                 <span className="font-medium text-foreground">Remote / India</span>
               </li>
               <li className="flex justify-between border-b border-border/50 pb-2">
-                <span className="text-muted-foreground">Experience</span>
-                <span className="font-medium text-foreground">5+ Years</span>
+                <span className="text-muted-foreground">Status</span>
+                <span className="font-medium text-foreground">CS Undergraduate</span>
               </li>
               <li className="flex justify-between border-b border-border/50 pb-2">
                 <span className="text-muted-foreground">Focus</span>
-                <span className="font-medium text-foreground">Microservices</span>
+                <span className="font-medium text-foreground">Backend & AI</span>
               </li>
             </ul>
           </div>
