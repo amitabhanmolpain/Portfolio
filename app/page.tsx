@@ -40,8 +40,8 @@ const projects: Array<{
   },
   {
     title: "React Native Hotel App",
-    description: "A mobile application built with React Native for browsing and booking hotels. Features a modern UI and seamless user experience across iOS and Android platforms.",
-    tags: ["React Native", "Mobile"],
+    description: "A mobile application built with React Native, Docker, and Supabase for browsing and booking hotels. Features a modern UI with real-time database integration and seamless user experience across iOS and Android platforms.",
+    tags: ["React Native", "Docker", "Supabase", "Mobile"],
     image: "https://images.unsplash.com/photo-1631049307038-da0ec84d8b31?w=800&h=500&fit=crop",
     github: "https://github.com/amitabhanmolpain/react-native-hotel-app"
   },
