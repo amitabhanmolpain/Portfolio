@@ -8,7 +8,7 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
-  title: "Amitabh Anmol Pain | Backend Developer",
+  title: "Amitabh Anmol Pain",
   description:
     "Portfolio of Amitabh Anmol Pain, a specialized Backend Developer focusing on scalable systems and distributed architectures.",
   generator: "v0.app",
