@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Portfolio of Amitabh Anmol Pain, a specialized Backend Developer focusing on scalable systems and distributed architectures.",
     images: [
       {
-        url: "/professional-portrait.png",
+        url: "/logo-a.svg",
         width: 200,
         height: 200,
         alt: "Amitabh Anmol Pain",
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "/professional-portrait.png",
-    apple: "/professional-portrait.png",
+    icon: "/logo-a.svg",
+    apple: "/logo-a.svg",
   },
 }
 
