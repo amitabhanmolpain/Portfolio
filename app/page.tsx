@@ -18,31 +18,31 @@ const projects: Array<{
   github?: string
 }> = [
   {
+    title: "Restaurant Management & Analysis",
+    description: "A full-stack web application for restaurant owners to analyze customer reviews, monitor sales trends, reduce food wastage, and boost revenue. Built with React, Flask, and MongoDB with interactive dashboards using Matplotlib, Seaborn, and Scatterplotlib for real-time insights.",
+    tags: ["Flask", "React", "MongoDB", "Data Visualization", "Fullstack"],
+    image: "/resturant-analysis.jpg",
+    github: "https://github.com/amitabhanmolpain/restaurant-analysis"
+  },
+  {
     title: "Real-Time Chat Application",
     description: "A full-stack MERN chat application with real-time messaging using WebSockets. MongoDB serves as the main database, while Redis is used as a cache database for efficient message handling.",
-    tags: ["MERN", "MongoDB", "WebSockets", "Redis", "Fullstack"],
-    image: "https://via.placeholder.com/800x500?text=Real-Time+Chat+App",
+    tags: ["MERN", "Redis", "WebSockets", "Fullstack"],
+    image: "/chat-app.png",
     github: "https://github.com/amitabhanmolpain/real-time-chat-app"
   },
   {
     title: "Ecofinds - Student Marketplace",
     description: "A smart MERN stack marketplace where students can buy and sell second-hand products at affordable prices. Features a user-friendly interface for browsing, listing, and managing transactions.",
     tags: ["MERN", "MongoDB", "Marketplace", "Fullstack"],
-    image: "https://via.placeholder.com/800x500?text=Ecofinds+Marketplace",
+    image: "/eco-finds.png",
     github: "https://github.com/amitabhanmolpain/Eco-finds"
-  },
-  {
-    title: "Restaurant Management & Analysis",
-    description: "A full-stack web application for restaurant owners to analyze customer reviews, monitor sales trends, reduce food wastage, and boost revenue. Built with React, Flask, and MongoDB with interactive dashboards using Matplotlib, Seaborn, and Scatterplotlib for real-time insights.",
-    tags: ["Flask", "React", "MongoDB", "Data Visualization", "Fullstack"],
-    image: "https://images.unsplash.com/photo-1554118811-1e0d58224e24?w=800&h=500&fit=crop",
-    github: "https://github.com/amitabhanmolpain/restaurant-analysis"
   },
   {
     title: "React Native Hotel App",
     description: "A mobile application built with React Native for browsing and booking hotels. Features a modern UI and seamless user experience across iOS and Android platforms.",
     tags: ["React Native", "Mobile"],
-    image: "https://images.unsplash.com/photo-1631049307038-da0ec84d8b31?w=800&h=500&fit=crop",
+    image: "/hotel-app.jpg",
     github: "https://github.com/amitabhanmolpain/react-native-hotel-app"
   },
   {
@@ -56,7 +56,7 @@ const projects: Array<{
     title: "Consumer Justice AI Agent",
     description: "A smart AI-Agent that analyzes user-reported injustices to determine if they fall under Consumer Act provisions. It provides guidance for settlement and can automatically file complaints on government websites.",
     tags: ["Google ADK", "AI Agents", "Consumer Protection"],
-    image: "https://via.placeholder.com/800x500?text=Consumer+Justice+AI",
+    image: "/consumer-justice.png",
     github: "https://github.com/amitabhanmolpain/CONSUMER_JUSTICE_AI_AGENT"
   }
 ]
