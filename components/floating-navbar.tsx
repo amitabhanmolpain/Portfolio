@@ -27,14 +27,14 @@ export function FloatingNavbar() {
   return (
     <nav
       ref={navRef}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-6 py-3 rounded-full border border-border/50 bg-background/60 backdrop-blur-xl shadow-2xl"
+      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] md:w-auto max-w-[95vw] px-4 md:px-6 py-3 rounded-full border border-border/50 bg-background/80 backdrop-blur-xl shadow-2xl"
     >
-      <ul className="flex items-center gap-8">
+      <ul className="flex items-center justify-center gap-3 sm:gap-4 md:gap-8 overflow-x-auto scrollbar-hide">
         {navItems.map((item) => (
-          <li key={item.name}>
+          <li key={item.name} className="shrink-0">
             <Link
               href={item.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs sm:text-sm font-medium text-muted-foreground hover:text-primary transition-colors whitespace-nowrap"
             >
               {item.name}
             </Link>

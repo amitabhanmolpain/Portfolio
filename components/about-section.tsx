@@ -5,15 +5,15 @@ import { Download } from "lucide-react"
 
 export function AboutSection() {
   return (
-    <section id="about" className="px-6 md:px-24 max-w-7xl mx-auto py-32 border-t border-border/50">
-      <div className="space-y-12">
+    <section id="about" className="px-4 sm:px-6 md:px-24 max-w-7xl mx-auto py-16 md:py-32 border-t border-border/50">
+      <div className="space-y-8 md:space-y-12">
         <div className="space-y-2">
-          <h2 className="text-4xl font-bold tracking-tight">About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">About Me</h2>
           <div className="h-1 w-12 bg-primary rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12 items-start">
-          <div className="md:col-span-2 space-y-6 text-lg text-muted-foreground leading-relaxed">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-start">
+          <div className="md:col-span-2 space-y-4 md:space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
             <p>
               I am a Computer Science undergraduate currently in my third year, with a strong passion for coding and building scalable backend systems. I actively develop projects and contribute to GitHub, and I occasionally participate in open-source initiatives to collaborate and learn from the developer community.
             </p>
