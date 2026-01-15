@@ -11,23 +11,22 @@ export const metadata: Metadata = {
   title: "Amitabh Anmol Pain",
   description:
     "Portfolio of Amitabh Anmol Pain, a specialized Backend Developer focusing on scalable systems and distributed architectures.",
-  generator: "v0.app",
-  icons: {
-    icon: [
+  openGraph: {
+    title: "Amitabh Anmol Pain",
+    description:
+      "Portfolio of Amitabh Anmol Pain, a specialized Backend Developer focusing on scalable systems and distributed architectures.",
+    images: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/professional-portrait.png",
+        width: 200,
+        height: 200,
+        alt: "Amitabh Anmol Pain",
       },
     ],
-    apple: "/apple-icon.png",
+  },
+  icons: {
+    icon: "/professional-portrait.png",
+    apple: "/professional-portrait.png",
   },
 }
 
