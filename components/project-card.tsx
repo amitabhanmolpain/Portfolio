@@ -21,6 +21,9 @@ export function ProjectCard({ title, description, tags, image, index, github }: 
   const cardRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    // Disable animations on mobile
+    if (window.innerWidth < 768) return
+
     gsap.fromTo(
       cardRef.current,
       { y: 50, opacity: 0 },
@@ -40,9 +43,9 @@ export function ProjectCard({ title, description, tags, image, index, github }: 
   return (
     <div
       ref={cardRef}
-      className="group flex flex-col p-6 rounded-[2rem] bg-muted/20 border border-border hover:bg-muted/40 hover:border-primary/20 transition-all duration-300"
+      className="group flex flex-col p-4 md:p-6 rounded-2xl md:rounded-[2rem] bg-muted/20 border border-border hover:bg-muted/40 hover:border-primary/20 transition-all duration-300"
     >
-      <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-border bg-muted mb-6">
+      <div className="relative aspect-[16/10] rounded-xl md:rounded-2xl overflow-hidden border border-border bg-muted mb-4 md:mb-6">
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
@@ -61,19 +64,19 @@ export function ProjectCard({ title, description, tags, image, index, github }: 
         </div>
       </div>
 
-      <div className="space-y-4 flex-grow px-2">
-        <div className="space-y-1">
-          <h3 className="text-2xl font-bold tracking-tight group-hover:text-primary transition-colors">{title}</h3>
-          <div className="flex flex-wrap gap-x-3 gap-y-1">
+      <div className="space-y-3 md:space-y-4 flex-grow px-1 md:px-2">
+        <div className="space-y-1 md:space-y-2">
+          <h3 className="text-lg md:text-2xl font-bold tracking-tight group-hover:text-primary transition-colors">{title}</h3>
+          <div className="flex flex-wrap gap-x-2 md:gap-x-3 gap-y-1">
             {tags.slice(0, 3).map((tag) => (
-              <span key={tag} className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/80">
+              <span key={tag} className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] text-primary/80">
                 {tag}
               </span>
             ))}
           </div>
         </div>
 
-        <p className="text-muted-foreground leading-relaxed text-sm">{description}</p>
+        <p className="text-muted-foreground leading-relaxed text-xs md:text-sm">{description}</p>
 
         <div className="pt-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground group-hover:gap-4 transition-all cursor-pointer">
           View Details

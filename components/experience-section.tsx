@@ -64,22 +64,22 @@ export function ExperienceSection() {
   }, [])
 
   return (
-    <section id="experience" className="px-6 md:px-24 max-w-7xl mx-auto py-32 border-t border-border/50">
-      <div className="space-y-16">
+    <section id="experience" className="px-4 sm:px-6 md:px-24 max-w-7xl mx-auto py-16 md:py-32 border-t border-border/50">
+      <div className="space-y-12 md:space-y-16">
         <div className="space-y-2">
-          <h2 className="text-4xl font-bold tracking-tight">Work Experience</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Work Experience</h2>
           <div className="h-1 w-12 bg-primary rounded-full" />
         </div>
 
-        <div ref={containerRef} className="grid md:grid-cols-2 gap-8">
+        <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {experiences.map((exp, i) => (
             <div
               key={i}
-              className="experience-item flex flex-col p-8 rounded-3xl bg-muted/20 border border-border hover:border-primary/30 transition-all group"
+              className="experience-item flex flex-col p-5 md:p-8 rounded-2xl md:rounded-3xl bg-muted/20 border border-border hover:border-primary/30 transition-all group"
             >
-              <div className="flex gap-4 mb-6">
+              <div className="flex gap-3 md:gap-4 mb-4 md:mb-6">
                 {exp.logo && (
-                  <div className="relative w-12 h-12 flex-shrink-0">
+                  <div className="relative w-10 h-10 md:w-12 md:h-12 flex-shrink-0">
                     <Image
                       src={exp.logo}
                       alt={`${exp.company} logo`}
@@ -88,30 +88,30 @@ export function ExperienceSection() {
                     />
                   </div>
                 )}
-                <div className="flex flex-col gap-1 flex-1">
-                  <div className="flex justify-between items-start gap-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-primary">{exp.role}</h3>
-                      <p className="text-lg font-medium text-foreground">{exp.company}</p>
+                <div className="flex flex-col gap-1 flex-1 min-w-0">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4">
+                    <div className="min-w-0">
+                      <h3 className="text-lg md:text-2xl font-bold text-primary">{exp.role}</h3>
+                      <p className="text-base md:text-lg font-medium text-foreground">{exp.company}</p>
                     </div>
-                    <span className="text-xs font-mono py-1 px-3 rounded-full bg-primary/10 text-primary whitespace-nowrap">
+                    <span className="text-[10px] md:text-xs font-mono py-1 px-2 md:px-3 rounded-full bg-primary/10 text-primary whitespace-nowrap self-start">
                       {exp.period}
                     </span>
                   </div>
                 </div>
               </div>
 
-              <p className="text-muted-foreground leading-relaxed mb-6">{exp.description}</p>
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">{exp.description}</p>
 
               {exp.achievements && (
-                <div className="space-y-3 mt-auto">
-                  <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground/70">
+                <div className="space-y-2 md:space-y-3 mt-auto">
+                  <h4 className="text-xs md:text-sm font-semibold uppercase tracking-wider text-foreground/70">
                     Key Contributions:
                   </h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-1.5 md:space-y-2">
                     {exp.achievements.map((achievement, idx) => (
-                      <li key={idx} className="flex gap-3 text-sm text-muted-foreground">
-                        <span className="text-primary mt-1 flex-shrink-0">•</span>
+                      <li key={idx} className="flex gap-2 md:gap-3 text-xs md:text-sm text-muted-foreground">
+                        <span className="text-primary mt-0.5 md:mt-1 flex-shrink-0">•</span>
                         <span>{achievement}</span>
                       </li>
                     ))}
@@ -120,7 +120,7 @@ export function ExperienceSection() {
               )}
 
               {exp.skills && (
-                <div className="flex flex-wrap gap-2 mt-8">
+                <div className="flex flex-wrap gap-1.5 md:gap-2 mt-6 md:mt-8">
                   {exp.skills.map((s) => (
                     <span
                       key={s}
