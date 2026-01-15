@@ -63,7 +63,7 @@ const projects: Array<{
 
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState("All")
-  const filters = ["All", "Backend", "AI Agents", "Microservices", "Fullstack", "Mobile", "MERN", "Flask"]
+  const filters = ["All", "Backend", "AI Agents", "Fullstack", "Mobile", "MERN", "Flask"]
 
   const filteredProjects = projects.filter((project) => {
     if (activeFilter === "All") return true
