@@ -12,7 +12,7 @@ export function HeroSection() {
   const descRef = useRef<HTMLParagraphElement>(null)
   const actionsRef = useRef<HTMLDivElement>(null)
 
-  const roles = ["Backend Developer", "Fullstack Developer", "Microservices"]
+  const roles = ["Backend Developer", "Fullstack Developer"]
   const [roleIndex, setRoleIndex] = useState(0)
   const [currentText, setCurrentText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
@@ -70,8 +70,7 @@ export function HeroSection() {
           </div>
 
           <p ref={descRef} className="max-w-2xl text-xl md:text-2xl text-muted-foreground leading-relaxed font-light">
-            I build robust, scalable server-side systems and APIs that power seamless digital experiences. Learning
-            architectures for <span className="text-foreground font-semibold">distributed microservices</span>.
+            I build robust, scalable server-side systems and APIs that power seamless digital experiences. Learning cloud architecture for backend systems.
           </p>
 
           <div ref={actionsRef} className="flex flex-col gap-6 pt-4">

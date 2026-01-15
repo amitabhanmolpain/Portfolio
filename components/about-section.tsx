@@ -15,13 +15,10 @@ export function AboutSection() {
         <div className="grid md:grid-cols-3 gap-12 items-start">
           <div className="md:col-span-2 space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              I am a backend-focused Computer Science undergraduate with strong hands-on experience in building scalable, data-driven applications. I work primarily with Python, Flask, FastAPI, Node.js, and MongoDB, and I enjoy designing APIs, handling databases, and integrating machine learning into real-world systems.
+              I am a Computer Science undergraduate currently in my third year, with a strong passion for coding and building scalable backend systems. I actively develop projects and contribute to GitHub, and I occasionally participate in open-source initiatives to collaborate and learn from the developer community.
             </p>
             <p>
-              I have built and shipped multiple full-stack projects, including a fake and ghost job detection system developed during a global hackathon, where I implemented Random Forest and Logistic Regression models and connected them to a production-ready backend. As a solo developer and open-source contributor, I am comfortable owning end-to-end backend responsibilities—from API design and authentication to deployment and performance optimization.
-            </p>
-            <p>
-              I am particularly interested in backend systems, AI-powered applications, and scalable architectures, and I aim to grow into a backend engineer who builds reliable systems that solve meaningful problems.
+              I have taken part in multiple hackathons, including the Bolt Vibe Coding Hackathon and Walmart Sparkathon, and have been a finalist in several competitive hackathons. Currently, I am focusing on learning cloud architecture for backend systems and enjoy collaborating on impactful open-source projects.
             </p>
 
             <div className="pt-4">
