@@ -19,23 +19,20 @@ export function HeroSection() {
 
   useEffect(() => {
     const role = roles[roleIndex]
-    const timer = setTimeout(
-      () => {
-        if (!isDeleting) {
-          setCurrentText(role.substring(0, currentText.length + 1))
-          if (currentText === role) {
-            setTimeout(() => setIsDeleting(true), 1500)
-          }
-        } else {
-          setCurrentText(role.substring(0, currentText.length - 1))
-          if (currentText === "") {
-            setIsDeleting(false)
-            setRoleIndex((prev) => (prev + 1) % roles.length)
-          }
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        setCurrentText(role.substring(0, currentText.length + 1))
+        if (currentText === role) {
+          setTimeout(() => setIsDeleting(true), 1500)
         }
-      },
-      isDeleting ? 50 : 100,
-    )
+      } else {
+        setCurrentText(role.substring(0, currentText.length - 1))
+        if (currentText === "") {
+          setIsDeleting(false)
+          setRoleIndex((prev) => (prev + 1) % roles.length)
+        }
+      }
+    }, isDeleting ? 50 : 100)
 
     return () => clearTimeout(timer)
   }, [currentText, isDeleting, roleIndex])
@@ -51,7 +48,10 @@ export function HeroSection() {
 
   return (
     <section className="min-h-[90vh] flex flex-col justify-center px-4 sm:px-6 md:px-24 max-w-7xl mx-auto pt-20 md:pt-20">
-      <div ref={containerRef} className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 md:pt-12">
+      <div
+        ref={containerRef}
+        className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 md:pt-12"
+      >
         <div className="space-y-6 md:space-y-10 flex-1 w-full text-center md:text-left">
           <div className="space-y-3 md:space-y-6">
             <h1
@@ -60,7 +60,11 @@ export function HeroSection() {
             >
               Amitabh <br className="hidden md:block" /> Anmol Pain
             </h1>
-            <div ref={subTitleRef} className="flex items-center justify-center md:justify-start gap-2 md:gap-4">
+
+            <div
+              ref={subTitleRef}
+              className="flex items-center justify-center md:justify-start gap-2 md:gap-4"
+            >
               <div className="h-px w-6 md:w-10 bg-primary/60" />
               <p className="text-primary font-mono tracking-[0.1em] md:tracking-[0.2em] uppercase text-xs sm:text-sm md:text-lg lg:text-xl font-bold whitespace-nowrap">
                 {currentText}
@@ -70,14 +74,23 @@ export function HeroSection() {
             </div>
           </div>
 
-          <p ref={descRef} className="max-w-2xl text-sm sm:text-base md:text-xl lg:text-2xl text-muted-foreground leading-relaxed font-light mx-auto md:mx-0">
-            I build robust, scalable server-side systems and APIs that power seamless digital experiences.
+          <p
+            ref={descRef}
+            className="max-w-2xl text-sm sm:text-base md:text-xl lg:text-2xl text-muted-foreground leading-relaxed font-light mx-auto md:mx-0"
+          >
+            I build robust, scalable server-side systems and APIs that power seamless digital
+            experiences, with a growing focus on cloud architecture for backend systems.
           </p>
 
-          <div ref={actionsRef} className="flex flex-col gap-3 md:gap-6 pt-2 md:pt-4 items-center md:items-start">
+          <div
+            ref={actionsRef}
+            className="flex flex-col gap-3 md:gap-6 pt-2 md:pt-4 items-center md:items-start"
+          >
             <div className="flex items-center justify-center md:justify-start gap-2 md:gap-4 w-full">
               <div className="h-[1px] flex-1 bg-border/50 max-w-[40px] md:max-w-[60px]" />
-              <span className="text-[9px] md:text-xs font-bold text-muted-foreground uppercase tracking-[0.15em] md:tracking-[0.3em] whitespace-nowrap">Keep in touch</span>
+              <span className="text-[9px] md:text-xs font-bold text-muted-foreground uppercase tracking-[0.15em] md:tracking-[0.3em] whitespace-nowrap">
+                Keep in touch
+              </span>
               <div className="h-[1px] flex-1 bg-border/50 max-w-[40px] md:max-w-[100px]" />
             </div>
 
@@ -91,6 +104,7 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                 <Github className="h-5 md:h-6 w-5 md:w-6 relative z-10 group-hover:text-primary transition-colors" />
               </a>
+
               <a
                 href="https://www.linkedin.com/in/amitabh-anmol-pain-118308309/"
                 target="_blank"
@@ -100,6 +114,7 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                 <Linkedin className="h-5 md:h-6 w-5 md:w-6 relative z-10 group-hover:text-primary transition-colors" />
               </a>
+
               <a
                 href="mailto:ami05tabh@gmail.com"
                 className="group relative p-3 md:p-4 rounded-2xl bg-muted/30 border border-border/50 hover:border-primary/50 transition-all duration-500 overflow-hidden"

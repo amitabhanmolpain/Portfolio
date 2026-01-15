@@ -19,74 +19,86 @@ const projects: Array<{
 }> = [
   {
     title: "Restaurant Management & Analysis",
-    description: "A full-stack web application for restaurant owners to analyze customer reviews, monitor sales trends, reduce food wastage, and boost revenue. Built with React, Flask, and MongoDB with interactive dashboards using Matplotlib, Seaborn, and Scatterplotlib for real-time insights.",
+    description:
+      "A full-stack web application for restaurant owners to analyze customer reviews, monitor sales trends, reduce food wastage, and boost revenue. Built with React, Flask, and MongoDB with interactive dashboards using Matplotlib and Seaborn.",
     tags: ["Flask", "React", "MongoDB", "Data Visualization", "Fullstack"],
     image: "/resturant-analysis.jpg",
-    github: "https://github.com/amitabhanmolpain/restaurant-analysis"
+    github: "https://github.com/amitabhanmolpain/restaurant-analysis",
   },
   {
     title: "Real-Time Chat Application",
-    description: "A full-stack MERN chat application with real-time messaging using WebSockets. MongoDB serves as the main database, while Redis is used as a cache database for efficient message handling.",
-    tags: ["MERN", "Redis", "WebSockets", "Fullstack"],
+    description:
+      "A full-stack MERN chat application with real-time messaging using WebSockets. MongoDB serves as the primary database, while Redis is used for caching and efficient message handling.",
+    tags: ["MERN", "MongoDB", "Redis", "WebSockets", "Fullstack"],
     image: "/chat-app.png",
-    github: "https://github.com/amitabhanmolpain/real-time-chat-app"
+    github: "https://github.com/amitabhanmolpain/real-time-chat-app",
   },
   {
     title: "Ecofinds - Student Marketplace",
-    description: "A smart MERN stack marketplace where students can buy and sell second-hand products at affordable prices. Features a user-friendly interface for browsing, listing, and managing transactions.",
+    description:
+      "A smart MERN stack marketplace where students can buy and sell second-hand products at affordable prices with secure listings and smooth transaction management.",
     tags: ["MERN", "MongoDB", "Marketplace", "Fullstack"],
     image: "/eco-finds.png",
-    github: "https://github.com/amitabhanmolpain/Eco-finds"
+    github: "https://github.com/amitabhanmolpain/Eco-finds",
   },
   {
     title: "React Native Hotel App",
-    description: "A mobile application built with React Native for browsing and booking hotels. Features a modern UI and seamless user experience across iOS and Android platforms.",
-    tags: ["React Native", "Mobile"],
+    description:
+      "A cross-platform mobile application built using React Native, Docker, and Supabase for browsing and booking hotels with real-time database integration.",
+    tags: ["React Native", "Docker", "Supabase", "Mobile"],
     image: "/hotel-app.jpg",
-    github: "https://github.com/amitabhanmolpain/react-native-hotel-app"
+    github: "https://github.com/amitabhanmolpain/react-native-hotel-app",
   },
   {
     title: "Real Estate Multi-Agent AI",
-    description: "An intelligent multi-agent AI system for real estate built using Google ADK. Leverages AI agents to automate property analysis, recommendations, and market insights.",
+    description:
+      "An intelligent multi-agent AI system for real estate built using Google ADK to automate property analysis, recommendations, and market insights.",
     tags: ["Google ADK", "AI Agents", "Real Estate"],
     image: "https://via.placeholder.com/800x500?text=Real+Estate+AI",
-    github: "https://github.com/amitabhanmolpain/Real-Estate-Multi-Agent"
+    github: "https://github.com/amitabhanmolpain/Real-Estate-Multi-Agent",
   },
   {
     title: "Consumer Justice AI Agent",
-    description: "A smart AI-Agent that analyzes user-reported injustices to determine if they fall under Consumer Act provisions. It provides guidance for settlement and can automatically file complaints on government websites.",
+    description:
+      "A smart AI agent that analyzes user-reported consumer fraud cases, determines applicability under consumer protection laws, and guides users through complaint filing processes.",
     tags: ["Google ADK", "AI Agents", "Consumer Protection"],
     image: "/consumer-justice.png",
-    github: "https://github.com/amitabhanmolpain/CONSUMER_JUSTICE_AI_AGENT"
-  }
+    github: "https://github.com/amitabhanmolpain/CONSUMER_JUSTICE_AI_AGENT",
+  },
 ]
 
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState("All")
-  const filters = ["All", "Backend", "AI Agents", "Microservices", "Fullstack", "Mobile", "MERN", "Flask"]
+
+  const filters = ["All", "Backend", "AI Agents", "Fullstack", "Mobile", "MERN", "Flask"]
 
   const filteredProjects = projects.filter((project) => {
     if (activeFilter === "All") return true
-    return project.tags.some((tag) => tag.toLowerCase().includes(activeFilter.toLowerCase()) || activeFilter.toLowerCase().includes(tag.toLowerCase()))
+    return project.tags.some(
+      (tag) =>
+        tag.toLowerCase().includes(activeFilter.toLowerCase()) ||
+        activeFilter.toLowerCase().includes(tag.toLowerCase())
+    )
   })
 
   return (
     <main className="relative selection:bg-primary selection:text-white">
       <FloatingNavbar />
-
       <HeroSection />
-
       <AboutSection />
-
       <SkillsSection />
-
       <ExperienceSection />
 
-      <section id="projects" className="px-4 sm:px-6 md:px-24 max-w-7xl mx-auto py-16 md:py-32 border-t border-border/50">
+      <section
+        id="projects"
+        className="px-4 sm:px-6 md:px-24 max-w-7xl mx-auto py-16 md:py-32 border-t border-border/50"
+      >
         <div className="space-y-12 md:space-y-16">
           <div className="space-y-6 md:space-y-8 text-center md:text-left">
             <div className="space-y-2">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Projects</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+                Projects
+              </h2>
               <div className="h-1 w-12 bg-primary rounded-full mx-auto md:mx-0" />
             </div>
 
@@ -114,7 +126,9 @@ export default function Home() {
               ))
             ) : (
               <div className="col-span-2 text-center py-12">
-                <p className="text-muted-foreground">No projects found for this filter.</p>
+                <p className="text-muted-foreground">
+                  No projects found for this filter.
+                </p>
               </div>
             )}
           </div>
@@ -122,7 +136,6 @@ export default function Home() {
       </section>
 
       <AchievementsSection />
-
       <Footer />
     </main>
   )
