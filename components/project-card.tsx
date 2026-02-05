@@ -68,11 +68,20 @@ export function ProjectCard({ title, description, tags, image, index, github }: 
         <div className="space-y-1 md:space-y-2">
           <h3 className="text-lg md:text-2xl font-bold tracking-tight group-hover:text-primary transition-colors">{title}</h3>
           <div className="flex flex-wrap gap-x-2 md:gap-x-3 gap-y-1">
-            {tags.slice(0, 3).map((tag) => (
-              <span key={tag} className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] text-primary/80">
-                {tag}
-              </span>
-            ))}
+            {tags.slice(0, 3).map((tag) => {
+              const orangeTags = [
+                "Cloudinary", "REST API", "WebSockets", "Rate limiter", "Seaborn", "Matplotlib", "Pandas"
+              ];
+              const isOrange = orangeTags.includes(tag);
+              return (
+                <span
+                  key={tag}
+                  className={`text-[9px] md:text-[10px] font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] ${isOrange ? "text-primary" : "text-primary/80"}`}
+                >
+                  {tag}
+                </span>
+              );
+            })}
           </div>
         </div>
 

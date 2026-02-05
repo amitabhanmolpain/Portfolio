@@ -20,7 +20,7 @@ const projects: Array<{
     title: "VitalEase — Gamified Mental Health Platform — Flask, MongoDB, Redis, WebSockets",
     description:
       `Architected a scalable mental health platform to support users dealing with depression, anxiety, and PTSD through interactive therapeutic games\n– Implemented Redis caching for high-speed score storage, significantly reducing latency\n– Developed secure RESTful APIs with role-based access control using Flask and MongoDB\n– Integrated WebSockets for real-time progress tracking and notifications\n– Optimized media handling using Cloudinary for medical assets`,
-    tags: ["Flask", "MongoDB", "Redis", "WebSockets", "Cloudinary", "Mental Health", "Fullstack"],
+    tags: ["Backend", "Flask", "MongoDB", "Redis", "Cloudinary", "REST API", "WebSockets", "Mental Health", "Fullstack"],
     image: "/h-care.png",
     github: "https://github.com/amitabhanmolpain/Healthcare",
   },
@@ -28,15 +28,15 @@ const projects: Array<{
     title: "Real Estate Website — Flask, MongoDB, React",
     description:
       `Built a full-stack real estate platform with React frontend and Flask REST APIs\n– Enabled seamless communication between admin and user panels via secure endpoints\n– Applied rate limiting on authentication to prevent abuse and enhance security`,
-    tags: ["Flask", "MongoDB", "React", "Fullstack", "Real Estate"],
+    tags: ["Backend", "Flask", "MongoDB", "React", "REST API", "Rate limiter", "Fullstack", "Real Estate"],
     image: "/R.png",
     github: "https://github.com/amitabhanmolpain/RealEstate",
   },
   {
     title: "Restaurant Management & Analysis",
     description:
-      "A full-stack web application for restaurant owners to analyze customer reviews, monitor sales trends, reduce food wastage, and boost revenue. Built with React, Flask, and MongoDB with interactive dashboards using Matplotlib and Seaborn.",
-    tags: ["Flask", "React", "MongoDB", "Data Visualization", "Fullstack"],
+      "A full-stack web application for restaurant owners to analyze customer reviews, monitor sales trends, reduce food wastage, and boost revenue. Built with React, Flask, and MongoDB with interactive dashboards using Matplotlib, Seaborn, and Pandas.",
+    tags: ["Backend", "Flask", "React", "MongoDB", "Matplotlib", "Seaborn", "Pandas", "Data Visualization", "Fullstack"],
     image: "/resturant-analysis.jpg",
     github: "https://github.com/amitabhanmolpain/restaurant-analysis",
   },
@@ -44,7 +44,7 @@ const projects: Array<{
     title: "Real-Time Chat Application",
     description:
       "A full-stack MERN chat application with real-time messaging using WebSockets. MongoDB serves as the primary database, while Redis is used for caching and efficient message handling.",
-    tags: ["MERN", "MongoDB", "Redis", "WebSockets", "Fullstack"],
+    tags: ["Backend", "MERN", "MongoDB", "Redis", "WebSockets", "Fullstack", "Websockets"],
     image: "/chat-app.png",
     github: "https://github.com/amitabhanmolpain/real-time-chat-app",
   },
@@ -52,7 +52,7 @@ const projects: Array<{
     title: "Ecofinds - Student Marketplace",
     description:
       "A smart MERN stack marketplace where students can buy and sell second-hand products at affordable prices with secure listings and smooth transaction management.",
-    tags: ["MERN", "MongoDB", "Marketplace", "Fullstack"],
+    tags: ["Backend", "MERN", "MongoDB", "Marketplace", "Fullstack"],
     image: "/eco-finds.png",
     github: "https://github.com/amitabhanmolpain/Eco-finds",
   },
@@ -60,7 +60,7 @@ const projects: Array<{
     title: "React Native Hotel App",
     description:
       "A cross-platform mobile application built using React Native, Docker, and Supabase for browsing and booking hotels with real-time database integration.",
-    tags: ["React Native", "Docker", "Supabase", "Mobile"],
+    tags: ["Backend", "React Native", "Docker", "Supabase", "Mobile"],
     image: "/hotel-app.jpg",
     github: "https://github.com/amitabhanmolpain/react-native-hotel-app",
   },
