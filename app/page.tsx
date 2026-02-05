@@ -22,15 +22,15 @@ const projects: Array<{
       `Architected a scalable mental health platform to support users dealing with depression, anxiety, and PTSD through interactive therapeutic games\n– Implemented Redis caching for high-speed score storage, significantly reducing latency\n– Developed secure RESTful APIs with role-based access control using Flask and MongoDB\n– Integrated WebSockets for real-time progress tracking and notifications\n– Optimized media handling using Cloudinary for medical assets`,
     tags: ["Flask", "MongoDB", "Redis", "WebSockets", "Cloudinary", "Mental Health", "Fullstack"],
     image: "/h-care.png",
-    github: "",
+    github: "https://github.com/amitabhanmolpain/Healthcare",
   },
   {
     title: "Real Estate Website — Flask, MongoDB, React",
     description:
       `Built a full-stack real estate platform with React frontend and Flask REST APIs\n– Enabled seamless communication between admin and user panels via secure endpoints\n– Applied rate limiting on authentication to prevent abuse and enhance security`,
     tags: ["Flask", "MongoDB", "React", "Fullstack", "Real Estate"],
-    image: "/r.png",
-    github: "",
+    image: "/R.png",
+    github: "https://github.com/amitabhanmolpain/RealEstate",
   },
   {
     title: "Restaurant Management & Analysis",
