@@ -22,7 +22,7 @@ export function AboutSection() {
             </p>
 
             <div className="pt-4">
-              <a href="/Amitabh-resume-05-Feb-2026.pdf" download="Resume.pdf">
+              <a href="/amitabh_anmol_pain_resume.pdf" download="amitabh_anmol_pain_resume.pdf">
                 <Button size="lg" className="gap-2 rounded-full px-8">
                   <Download className="h-4 w-4" />
                   Download Resume
