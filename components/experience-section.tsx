@@ -20,6 +20,7 @@ const experiences = [
       "Fixed critical bugs and improved code quality in maintainers' repositories, enhancing overall project stability.",
       "Collaborated with global developers, following best practices for code review and documentation.",
     ],
+    tags: ["Remote"],
     logo: "https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbWZqc20wZGowMDAwaTUwNHVtb2lndTJuIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=",
   },
   {
@@ -27,11 +28,12 @@ const experiences = [
     role: "Bolt World's Largest Vibe Coding Hackathon",
     period: "June 2025 - August 2025",
     description:
-      "Built an app for detecting fake jobs using machine learning models including regression modeling and random forest. Developed with Next.js, Tailwind CSS, and GSAP for smooth animations.",
+      "Bolt Vibe Coding Hackathon - Solo Participant. Built an app for detecting fake jobs using machine learning models including regression modeling and random forest. Developed with Next.js, Tailwind CSS, and GSAP for smooth animations.",
     achievements: [
       "Engineered an automated system to detect fake job listings using pattern recognition and verification algorithms.",
       "Focused on creating a safer environment for job seekers within major job portals.",
     ],
+    tags: ["Remote"],
     image: "/fake-job-detection-dashboard.jpg",
     logo: "https://server.cloud-station.io/cloudstation/bold-new-logo-4519818aa650bd2b61e9e0d9f1ed522a.png",
   },
@@ -94,9 +96,23 @@ export function ExperienceSection() {
                       <h3 className="text-lg md:text-2xl font-bold text-primary">{exp.role}</h3>
                       <p className="text-base md:text-lg font-medium text-foreground">{exp.company}</p>
                     </div>
-                    <span className="text-[10px] md:text-xs font-mono py-1 px-2 md:px-3 rounded-full bg-primary/10 text-primary whitespace-nowrap self-start">
-                      {exp.period}
-                    </span>
+                    <div className="flex flex-col gap-1.5 md:gap-2 items-start sm:items-end">
+                      <span className="text-[10px] md:text-xs font-mono py-1 px-2 md:px-3 rounded-full bg-primary/10 text-primary whitespace-nowrap">
+                        {exp.period}
+                      </span>
+                      {exp.tags && exp.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5 md:gap-2 justify-start sm:justify-end">
+                          {exp.tags.map((t) => (
+                            <span
+                              key={t}
+                              className="text-[10px] font-bold uppercase tracking-widest text-primary/60 bg-primary/5 px-2 py-1 rounded"
+                            >
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -119,7 +135,7 @@ export function ExperienceSection() {
                 </div>
               )}
 
-              {exp.skills && (
+              {exp.skills && exp.skills.length > 0 && (
                 <div className="flex flex-wrap gap-1.5 md:gap-2 mt-6 md:mt-8">
                   {exp.skills.map((s) => (
                     <span
