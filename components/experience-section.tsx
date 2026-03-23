@@ -20,6 +20,7 @@ const experiences = [
       "Fixed critical bugs and improved code quality in maintainers' repositories, enhancing overall project stability.",
       "Collaborated with global developers, following best practices for code review and documentation.",
     ],
+    skills: ["Git", "API development", "UI/UX", "Nextjs", "API testing"],
     tags: ["Remote"],
     logo: "https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbWZqc20wZGowMDAwaTUwNHVtb2lndTJuIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=",
   },
@@ -33,6 +34,7 @@ const experiences = [
       "Engineered an automated system to detect fake job listings using pattern recognition and verification algorithms.",
       "Focused on creating a safer environment for job seekers within major job portals.",
     ],
+    skills: ["UI/UX", "ML"],
     tags: ["Remote"],
     image: "/fake-job-detection-dashboard.jpg",
     logo: "https://server.cloud-station.io/cloudstation/bold-new-logo-4519818aa650bd2b61e9e0d9f1ed522a.png",
@@ -136,15 +138,20 @@ export function ExperienceSection() {
               )}
 
               {exp.skills && exp.skills.length > 0 && (
-                <div className="flex flex-wrap gap-1.5 md:gap-2 mt-6 md:mt-8">
-                  {exp.skills.map((s) => (
-                    <span
-                      key={s}
-                      className="text-[10px] font-bold uppercase tracking-widest text-primary/60 bg-primary/5 px-2 py-1 rounded"
-                    >
-                      {s}
-                    </span>
-                  ))}
+                <div className="space-y-2 md:space-y-3 mt-6 md:mt-8">
+                  <h4 className="text-xs md:text-sm font-semibold uppercase tracking-wider text-white">
+                    Skills:
+                  </h4>
+                  <div className="flex flex-wrap gap-1.5 md:gap-2">
+                    {exp.skills.map((s) => (
+                      <span
+                        key={s}
+                        className="text-[10px] font-bold uppercase tracking-widest text-primary/60 bg-primary/5 px-2 py-1 rounded"
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
