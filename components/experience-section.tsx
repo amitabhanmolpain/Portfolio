@@ -9,6 +9,21 @@ gsap.registerPlugin(ScrollTrigger)
 
 const experiences = [
   {
+    company: "Bolt Hackathon",
+    role: "Bolt World's Largest Vibe Coding Hackathon",
+    period: "June 2025 - August 2025",
+    description:
+      "Bolt Vibe Coding Hackathon - Solo Participant. Built an app for detecting fake jobs using machine learning models including regression modeling and random forest. Developed with Next.js, Tailwind CSS, and GSAP for smooth animations.",
+    achievements: [
+      "Engineered an automated system to detect fake job listings using pattern recognition and verification algorithms.",
+      "Focused on creating a safer environment for job seekers within major job portals.",
+    ],
+    skills: ["UI/UX", "ML"],
+    tags: ["Remote"],
+    image: "/fake-job-detection-dashboard.jpg",
+    logo: "https://server.cloud-station.io/cloudstation/bold-new-logo-4519818aa650bd2b61e9e0d9f1ed522a.png",
+  },
+  {
     company: "Hacktoberfest 2025",
     role: "Open Source Contributor",
     period: "October 2025 - November 2025",
@@ -23,21 +38,6 @@ const experiences = [
     skills: ["Git", "API development", "UI/UX", "Nextjs", "API testing"],
     tags: ["Remote"],
     logo: "https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbWZqc20wZGowMDAwaTUwNHVtb2lndTJuIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=",
-  },
-  {
-    company: "Bolt Hackathon",
-    role: "Bolt World's Largest Vibe Coding Hackathon",
-    period: "June 2025 - August 2025",
-    description:
-      "Bolt Vibe Coding Hackathon - Solo Participant. Built an app for detecting fake jobs using machine learning models including regression modeling and random forest. Developed with Next.js, Tailwind CSS, and GSAP for smooth animations.",
-    achievements: [
-      "Engineered an automated system to detect fake job listings using pattern recognition and verification algorithms.",
-      "Focused on creating a safer environment for job seekers within major job portals.",
-    ],
-    skills: ["UI/UX", "ML"],
-    tags: ["Remote"],
-    image: "/fake-job-detection-dashboard.jpg",
-    logo: "https://server.cloud-station.io/cloudstation/bold-new-logo-4519818aa650bd2b61e9e0d9f1ed522a.png",
   },
 ]
 
