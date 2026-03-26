@@ -4,24 +4,44 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
+import { CSSProperties } from "react"
 
 gsap.registerPlugin(ScrollTrigger)
 
-const experiences = [
+const blinkingStyle = `
+  @keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0.3; }
+  }
+  .blinking-tag {
+    animation: blink 1.5s infinite;
+  }
+`
+
+interface Experience {
+  company: string
+  role: string
+  period: string
+  upcomingEndDate?: Date
+  description: string
+  achievements: string[]
+  skills: string[]
+  tags: string[]
+  image?: string
+  logo: string
+}
+
+const experiences: Experience[] = [
   {
-    company: "Bolt Hackathon",
-    role: "Bolt World's Largest Vibe Coding Hackathon",
-    period: "June 2025 - August 2025",
-    description:
-      "Bolt Vibe Coding Hackathon - Solo Participant. Built an app for detecting fake jobs using machine learning models including regression modeling and random forest. Developed with Next.js, Tailwind CSS, and GSAP for smooth animations.",
-    achievements: [
-      "Engineered an automated system to detect fake job listings using pattern recognition and verification algorithms.",
-      "Focused on creating a safer environment for job seekers within major job portals.",
-    ],
-    skills: ["UI/UX", "ML"],
-    tags: ["Remote"],
-    image: "/fake-job-detection-dashboard.jpg",
-    logo: "https://server.cloud-station.io/cloudstation/bold-new-logo-4519818aa650bd2b61e9e0d9f1ed522a.png",
+    company: "HCL Tech",
+    role: "SDE Intern",
+    period: "April 2026",
+    upcomingEndDate: new Date(2026, 3, 1), // April 2026
+    description: "Software Development Engineer Intern at HCL Technologies.",
+    achievements: [],
+    skills: [],
+    tags: ["Internship"],
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6BNVe-7Jaf5vy8z76m2gDxNkqC33Q-gSTDQ&s",
   },
   {
     company: "Hacktoberfest 2025",
@@ -39,10 +59,49 @@ const experiences = [
     tags: ["Remote"],
     logo: "https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbWZqc20wZGowMDAwaTUwNHVtb2lndTJuIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=",
   },
+  {
+    company: "Bolt Hackathon",
+    role: "Bolt World's Largest Vibe Coding Hackathon",
+    period: "June 2025 - August 2025",
+    description:
+      "Bolt Vibe Coding Hackathon - Solo Participant. Built an app for detecting fake jobs using machine learning models including regression modeling and random forest. Developed with Next.js, Tailwind CSS, and GSAP for smooth animations.",
+    achievements: [
+      "Engineered an automated system to detect fake job listings using pattern recognition and verification algorithms.",
+      "Focused on creating a safer environment for job seekers within major job portals.",
+    ],
+    skills: ["UI/UX", "ML"],
+    tags: ["Remote"],
+    image: "/fake-job-detection-dashboard.jpg",
+    logo: "https://server.cloud-station.io/cloudstation/bold-new-logo-4519818aa650bd2b61e9e0d9f1ed522a.png",
+  },
 ]
 
 export function ExperienceSection() {
   const containerRef = useRef<HTMLDivElement>(null)
+
+  // Filter experiences based on current date
+  const getFilteredExperiences = () => {
+    const currentDate = new Date()
+    return experiences.filter((exp) => {
+      // If experience has upcomingEndDate and current date is past it, exclude it
+      if (exp.upcomingEndDate && currentDate >= exp.upcomingEndDate) {
+        return false
+      }
+      return true
+    })
+  }
+
+  // Get display period (removes "Upcoming" tag if past the end date)
+  const getDisplayPeriod = (exp: typeof experiences[0]) => {
+    const currentDate = new Date()
+    if (exp.upcomingEndDate && currentDate >= exp.upcomingEndDate && exp.period === "Upcoming") {
+      // Return empty or you can set a default message
+      return "Completed"
+    }
+    return exp.period
+  }
+
+  const filteredExperiences = getFilteredExperiences()
 
   useEffect(() => {
     if (!containerRef.current) return
@@ -76,7 +135,7 @@ export function ExperienceSection() {
         </div>
 
         <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {experiences.map((exp, i) => (
+          {filteredExperiences.map((exp, i) => (
             <div
               key={i}
               className="experience-item flex flex-col p-5 md:p-8 rounded-2xl md:rounded-3xl bg-muted/20 border border-border hover:border-primary/30 transition-all group"
@@ -99,9 +158,19 @@ export function ExperienceSection() {
                       <p className="text-base md:text-lg font-medium text-foreground">{exp.company}</p>
                     </div>
                     <div className="flex flex-col gap-1.5 md:gap-2 items-start sm:items-end">
-                      <span className="text-[10px] md:text-xs font-mono py-1 px-2 md:px-3 rounded-full bg-primary/10 text-primary whitespace-nowrap">
-                        {exp.period}
-                      </span>
+                      <div className="flex items-center gap-2 flex-wrap justify-start sm:justify-end">
+                        <span className="text-[10px] md:text-xs font-mono py-1 px-2 md:px-3 rounded-full bg-primary/10 text-primary whitespace-nowrap">
+                          {getDisplayPeriod(exp)}
+                        </span>
+                        {exp.company === "HCL Tech" && (
+                          <style>{blinkingStyle}</style>
+                        )}
+                        {exp.company === "HCL Tech" && (
+                          <span className="blinking-tag text-[10px] font-bold uppercase tracking-widest text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded whitespace-nowrap">
+                            Upcoming
+                          </span>
+                        )}
+                      </div>
                       {exp.tags && exp.tags.length > 0 && (
                         <div className="flex flex-wrap gap-1.5 md:gap-2 justify-start sm:justify-end">
                           {exp.tags.map((t) => (
@@ -121,37 +190,45 @@ export function ExperienceSection() {
 
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">{exp.description}</p>
 
-              {exp.achievements && (
+              {(exp.achievements || exp.company === "HCL Tech") && (
                 <div className="space-y-2 md:space-y-3 mt-auto">
                   <h4 className="text-xs md:text-sm font-semibold uppercase tracking-wider text-foreground/70">
                     Key Contributions:
                   </h4>
-                  <ul className="space-y-1.5 md:space-y-2">
-                    {exp.achievements.map((achievement, idx) => (
-                      <li key={idx} className="flex gap-2 md:gap-3 text-xs md:text-sm text-muted-foreground">
-                        <span className="text-primary mt-0.5 md:mt-1 flex-shrink-0">•</span>
-                        <span>{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {exp.achievements && exp.achievements.length > 0 ? (
+                    <ul className="space-y-1.5 md:space-y-2">
+                      {exp.achievements.map((achievement, idx) => (
+                        <li key={idx} className="flex gap-2 md:gap-3 text-xs md:text-sm text-muted-foreground">
+                          <span className="text-primary mt-0.5 md:mt-1 flex-shrink-0">•</span>
+                          <span>{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <div className="h-6 md:h-8" />
+                  )}
                 </div>
               )}
 
-              {exp.skills && exp.skills.length > 0 && (
+              {(exp.skills || true) && (
                 <div className="space-y-2 md:space-y-3 mt-6 md:mt-8">
                   <h4 className="text-xs md:text-sm font-semibold uppercase tracking-wider text-white">
                     Skills:
                   </h4>
-                  <div className="flex flex-wrap gap-1.5 md:gap-2">
-                    {exp.skills.map((s) => (
-                      <span
-                        key={s}
-                        className="text-[10px] font-bold uppercase tracking-widest text-primary/60 bg-primary/5 px-2 py-1 rounded"
-                      >
-                        {s}
-                      </span>
-                    ))}
-                  </div>
+                  {exp.skills && exp.skills.length > 0 ? (
+                    <div className="flex flex-wrap gap-1.5 md:gap-2">
+                      {exp.skills.map((s) => (
+                        <span
+                          key={s}
+                          className="text-[10px] font-bold uppercase tracking-widest text-primary/60 bg-primary/5 px-2 py-1 rounded"
+                        >
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="h-6 md:h-8" />
+                  )}
                 </div>
               )}
             </div>
