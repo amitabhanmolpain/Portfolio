@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { ExternalLink } from "lucide-react"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -13,14 +15,16 @@ const certifications = [
     issuer: "Professional Certification",
     date: "2025",
     description: "Comprehensive expertise in full-stack development covering frontend, backend, and database technologies with modern frameworks and best practices.",
-    image: "https://via.placeholder.com/400x300?text=Full+Stack",
+    image: "/Amitabh-web-dev-certificate.png",
+    credential: "/Amitabh-web-dev-certificate.pdf",
   },
   {
     title: "Building with Claude API",
     issuer: "Anthropic",
-    date: "2025",
+    date: "2026",
     description: "Advanced certification in building intelligent applications using the Claude API, including prompt engineering, API integration, and AI-powered workflows.",
-    image: "https://via.placeholder.com/400x300?text=Claude+API",
+    image: "https://cc.sj-cdn.net/certificate/ca6k4fml7abo/certificate-vgjuqygp36nc-1772970357.jpg?Expires=1774638022&Signature=Ch2AQSsnChrUY9obD0RUFgTRdBqMWx5oRSRg7WNXmjOtyU5cVXTC52nq67RvT0iDGh1PPVLu3m-FeRF6aYbM770dDEQu9r2K4w8JY5MfmijvQyuPzwkc6DxOgp~mHGqCGn8PPU72~OMXQ2MF15GEVglM3n5n7NbLgiyokHhpoQj2Lzn4cinYe9pHMPkqxwLl7Ap3HFst3AV7JERsenuzbL5CGUYYSEp4O7vcmVnyQo9WhnvpTUvP5M7xzrdgKZpmbPHMLxIpPFOD6YY9NwjbmxNBpLkmXN5n8Sh2u3XiykDfIcyPXme9peII8e7oeUZ6rkMTY5apY7nlTu8lXjTPJQ__&Key-Pair-Id=APKAI3B7HFD2VYJQK4MQ",
+    credential: "/certificate-Building-with-claude-api.pdf",
   },
 ]
 
@@ -64,7 +68,7 @@ export function CertificationsSection() {
               key={i}
               className="certification-item flex flex-col p-6 md:p-8 rounded-2xl md:rounded-3xl bg-muted/20 border border-border hover:border-primary/30 transition-all group"
             >
-              <div className="relative w-full h-40 md:h-48 mb-4 md:mb-6 rounded-lg overflow-hidden">
+              <div className="relative w-full h-40 md:h-48 mb-4 md:mb-6 rounded-lg overflow-hidden bg-muted/50">
                 <Image
                   src={cert.image}
                   alt={cert.title}
@@ -81,6 +85,15 @@ export function CertificationsSection() {
                 </div>
 
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{cert.description}</p>
+
+                <div className="mt-auto pt-4">
+                  <a href={cert.credential} target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="gap-2">
+                      <ExternalLink className="h-4 w-4" />
+                      View Credential
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
