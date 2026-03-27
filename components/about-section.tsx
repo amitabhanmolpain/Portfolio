@@ -36,7 +36,7 @@ export function AboutSection() {
             <ul className="space-y-4">
               <li className="flex justify-between border-b border-border/50 pb-2">
                 <span className="text-muted-foreground">Location</span>
-                <span className="font-medium text-foreground">Remote / India</span>
+                <span className="font-medium text-foreground">Bangalore / India</span>
               </li>
               <li className="flex justify-between border-b border-border/50 pb-2">
                 <span className="text-muted-foreground">Status</span>
