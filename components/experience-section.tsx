@@ -36,7 +36,7 @@ const experiences: Experience[] = [
     company: "HCL Tech",
     role: "SDE Intern",
     period: "April 2026",
-    upcomingEndDate: new Date(2026, 3, 1), // April 2026
+    upcomingEndDate: new Date(2026, 3, 30), // April 30, 2026
     description: "Software Development Engineer Intern at HCL Technologies.",
     achievements: [],
     skills: [],
@@ -142,7 +142,7 @@ export function ExperienceSection() {
             >
               <div className="flex gap-3 md:gap-4 mb-4 md:mb-6">
                 {exp.logo && (
-                  <div className="relative w-10 h-10 md:w-12 md:h-12 flex-shrink-0">
+                  <div className="relative w-12 h-12 md:w-14 md:h-14 flex-shrink-0">
                     <Image
                       src={exp.logo}
                       alt={`${exp.company} logo`}
@@ -162,14 +162,6 @@ export function ExperienceSection() {
                         <span className="text-[10px] md:text-xs font-mono py-1 px-2 md:px-3 rounded-full bg-primary/10 text-primary whitespace-nowrap">
                           {getDisplayPeriod(exp)}
                         </span>
-                        {exp.company === "HCL Tech" && (
-                          <style>{blinkingStyle}</style>
-                        )}
-                        {exp.company === "HCL Tech" && (
-                          <span className="blinking-tag text-[10px] font-bold uppercase tracking-widest text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded whitespace-nowrap">
-                            Upcoming
-                          </span>
-                        )}
                       </div>
                       {exp.tags && exp.tags.length > 0 && (
                         <div className="flex flex-wrap gap-1.5 md:gap-2 justify-start sm:justify-end">
