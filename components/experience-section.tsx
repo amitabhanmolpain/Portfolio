@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
@@ -38,8 +38,14 @@ const experiences: Experience[] = [
     period: "April 2026",
     upcomingEndDate: new Date(2026, 3, 30), // April 30, 2026
     description: "Software Development Engineer Intern at HCL Technologies.",
-    achievements: [],
-    skills: [],
+    achievements: [
+      "Designed and implemented a RESTful API architecture to support modular, maintainable, and scalable backend services.",
+      "Developed and optimized CRUD operations for multiple business workflows, ensuring reliable data handling across endpoints.",
+      "Applied ACID principles in database design and transaction management to maintain data integrity and consistency at scale.",
+      "Executed database schema migrations with proper versioning and rollback practices to enable safe, traceable releases.",
+      "Implemented Git-based version control workflows, including branching and pull request reviews, to improve collaboration and code quality.",
+    ],
+    skills: ["RESTful APIs", "CRUD", "SQL", "Database Migrations", "Git"],
     tags: ["Internship"],
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6BNVe-7Jaf5vy8z76m2gDxNkqC33Q-gSTDQ&s",
   },
@@ -78,6 +84,7 @@ const experiences: Experience[] = [
 
 export function ExperienceSection() {
   const containerRef = useRef<HTMLDivElement>(null)
+  const [isClientMounted, setIsClientMounted] = useState(false)
 
   // Filter experiences based on current date
   const getFilteredExperiences = () => {
@@ -93,6 +100,9 @@ export function ExperienceSection() {
 
   // Get display period (removes "Upcoming" tag if past the end date)
   const getDisplayPeriod = (exp: typeof experiences[0]) => {
+    // Keep SSR and initial hydration deterministic; apply date-based updates after mount.
+    if (!isClientMounted) return exp.period
+
     const currentDate = new Date()
     if (exp.upcomingEndDate && currentDate >= exp.upcomingEndDate && exp.period === "Upcoming") {
       // Return empty or you can set a default message
@@ -101,9 +111,11 @@ export function ExperienceSection() {
     return exp.period
   }
 
-  const filteredExperiences = getFilteredExperiences()
+  const filteredExperiences = isClientMounted ? getFilteredExperiences() : experiences
 
   useEffect(() => {
+    setIsClientMounted(true)
+
     if (!containerRef.current) return
 
     const items = containerRef.current.querySelectorAll(".experience-item")
