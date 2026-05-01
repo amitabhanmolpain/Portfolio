@@ -22,7 +22,6 @@ interface Experience {
   company: string
   role: string
   period: string
-  upcomingEndDate?: Date
   description: string
   achievements: string[]
   skills: string[]
@@ -36,16 +35,16 @@ const experiences: Experience[] = [
     company: "HCL Tech",
     role: "SDE Intern",
     period: "April 2026",
-    upcomingEndDate: new Date(2026, 3, 30), // April 30, 2026
     description: "Software Development Engineer Intern at HCL Technologies.",
     achievements: [
+      "Built an AI agent using Copilot for the client.",
       "Designed and implemented a RESTful API architecture to support modular, maintainable, and scalable backend services.",
       "Developed and optimized CRUD operations for multiple business workflows, ensuring reliable data handling across endpoints.",
       "Applied ACID principles in database design and transaction management to maintain data integrity and consistency at scale.",
       "Executed database schema migrations with proper versioning and rollback practices to enable safe, traceable releases.",
       "Implemented Git-based version control workflows, including branching and pull request reviews, to improve collaboration and code quality.",
     ],
-    skills: ["RESTful APIs", "CRUD", "SQL", "Database Migrations", "Git"],
+    skills: ["REST API", "SQL", "DATA MIGRATIONS", "COPILOT", "ACID"],
     tags: ["Internship"],
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6BNVe-7Jaf5vy8z76m2gDxNkqC33Q-gSTDQ&s",
   },
@@ -84,38 +83,10 @@ const experiences: Experience[] = [
 
 export function ExperienceSection() {
   const containerRef = useRef<HTMLDivElement>(null)
-  const [isClientMounted, setIsClientMounted] = useState(false)
 
-  // Filter experiences based on current date
-  const getFilteredExperiences = () => {
-    const currentDate = new Date()
-    return experiences.filter((exp) => {
-      // If experience has upcomingEndDate and current date is past it, exclude it
-      if (exp.upcomingEndDate && currentDate >= exp.upcomingEndDate) {
-        return false
-      }
-      return true
-    })
-  }
-
-  // Get display period (removes "Upcoming" tag if past the end date)
-  const getDisplayPeriod = (exp: typeof experiences[0]) => {
-    // Keep SSR and initial hydration deterministic; apply date-based updates after mount.
-    if (!isClientMounted) return exp.period
-
-    const currentDate = new Date()
-    if (exp.upcomingEndDate && currentDate >= exp.upcomingEndDate && exp.period === "Upcoming") {
-      // Return empty or you can set a default message
-      return "Completed"
-    }
-    return exp.period
-  }
-
-  const filteredExperiences = isClientMounted ? getFilteredExperiences() : experiences
+  const visibleExperiences = experiences
 
   useEffect(() => {
-    setIsClientMounted(true)
-
     if (!containerRef.current) return
 
     const items = containerRef.current.querySelectorAll(".experience-item")
@@ -147,14 +118,14 @@ export function ExperienceSection() {
         </div>
 
         <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {filteredExperiences.map((exp, i) => (
+          {visibleExperiences.map((exp, i) => (
             <div
               key={i}
               className="experience-item flex flex-col p-5 md:p-8 rounded-2xl md:rounded-3xl bg-muted/20 border border-border hover:border-primary/30 transition-all group"
             >
               <div className="flex gap-3 md:gap-4 mb-4 md:mb-6">
                 {exp.logo && (
-                  <div className="relative w-12 h-12 md:w-14 md:h-14 flex-shrink-0">
+                  <div className="relative w-12 h-12 md:w-14 md:h-14 shrink-0">
                     <Image
                       src={exp.logo}
                       alt={`${exp.company} logo`}
@@ -172,7 +143,7 @@ export function ExperienceSection() {
                     <div className="flex flex-col gap-1.5 md:gap-2 items-start sm:items-end">
                       <div className="flex items-center gap-2 flex-wrap justify-start sm:justify-end">
                         <span className="text-[10px] md:text-xs font-mono py-1 px-2 md:px-3 rounded-full bg-primary/10 text-primary whitespace-nowrap">
-                          {getDisplayPeriod(exp)}
+                          {exp.period}
                         </span>
                       </div>
                       {exp.tags && exp.tags.length > 0 && (
@@ -203,7 +174,7 @@ export function ExperienceSection() {
                     <ul className="space-y-1.5 md:space-y-2">
                       {exp.achievements.map((achievement, idx) => (
                         <li key={idx} className="flex gap-2 md:gap-3 text-xs md:text-sm text-muted-foreground">
-                          <span className="text-primary mt-0.5 md:mt-1 flex-shrink-0">•</span>
+                          <span className="text-primary mt-0.5 md:mt-1 shrink-0">•</span>
                           <span>{achievement}</span>
                         </li>
                       ))}
