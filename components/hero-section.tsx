@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail, Twitter } from "lucide-react"
 import Image from "next/image"
 
 export function HeroSection() {
@@ -95,6 +95,16 @@ export function HeroSection() {
             </div>
 
             <div className="flex gap-3 md:gap-4 flex-wrap justify-center md:justify-start">
+              <a
+                href="https://twitter.com/AnmolPain22790"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative p-3 md:p-4 rounded-2xl bg-muted/30 border border-border/50 hover:border-primary/50 transition-all duration-500 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                <Twitter className="h-5 md:h-6 w-5 md:w-6 relative z-10 group-hover:text-primary transition-colors" />
+              </a>
+
               <a
                 href="https://github.com/amitabhanmolpain"
                 target="_blank"
