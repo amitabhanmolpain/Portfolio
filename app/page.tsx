@@ -7,6 +7,7 @@ import { ProjectCard } from "@/components/project-card"
 import { SkillsSection } from "@/components/skills-section"
 import { ExperienceSection } from "@/components/experience-section"
 import { CertificationsSection } from "@/components/certifications-section"
+import { AchievementsSection } from "@/components/achievements-section"
 import { Footer } from "@/components/footer"
 import { AboutSection } from "@/components/about-section"
 
@@ -104,6 +105,7 @@ export default function Home() {
       <AboutSection />
       <SkillsSection />
       <ExperienceSection />
+      <AchievementsSection />
 
       <section
         id="projects"

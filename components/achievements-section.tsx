@@ -9,6 +9,12 @@ gsap.registerPlugin(ScrollTrigger)
 
 const achievements = [
   {
+    title: "2nd Prize in Commit and Conquer Hackathon",
+    org: "Commit and Conquer Hackathon",
+    icon: Trophy,
+    description: "Secured 2nd prize for outstanding project development and implementation.",
+  },
+  {
     title: "Artira Hackathon Finalist",
     org: "Artira Hackathon",
     icon: Award,
