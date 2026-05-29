@@ -13,6 +13,7 @@ const achievements = [
     org: "Commit and Conquer Hackathon",
     icon: Trophy,
     description: "Secured 2nd prize for outstanding project development and implementation.",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7461277110540738560/",
   },
   {
     title: "Artira Hackathon Finalist",
@@ -55,18 +56,25 @@ export function AchievementsSection() {
             Achievements
           </h2>
           <div className="h-1 md:h-1.5 w-16 md:w-20 bg-primary rounded-full shadow-[0_0_15px_rgba(var(--primary),0.5)]" />
+          <p className="text-muted-foreground mt-2">Click on any achievement to learn more details</p>
         </div>
 
         <div ref={containerRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {achievements.map((item, i) => (
             <div
               key={i}
-              className="p-6 md:p-8 rounded-2xl border border-border bg-muted/30 hover:bg-muted/50 transition-all group"
+              onClick={() => {
+                if (item.link) {
+                  window.open(item.link, "_blank")
+                }
+              }}
+              className="p-6 md:p-8 rounded-2xl border border-border bg-muted/30 hover:bg-muted/50 transition-all group cursor-pointer"
             >
               <item.icon className="h-8 w-8 md:h-10 md:w-10 text-primary mb-4 md:mb-6 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg md:text-xl font-bold mb-2">{item.title}</h3>
               <p className="text-sm text-primary/80 font-mono mb-4">{item.org}</p>
               <p className="text-muted-foreground text-sm">{item.description}</p>
+              <p className="text-xs text-primary/60 mt-4 font-medium group-hover:text-primary transition-colors">Click to learn more →</p>
             </div>
           ))}
         </div>
