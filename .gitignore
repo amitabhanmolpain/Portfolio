@@ -26,4 +26,35 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# IDE and editor files
+.claude.json
+.claude.json.backup
+.vscode/
+
+# System and OS files
+.condarc
+keyring
+.keyring*
+debug.keystore
+debug.keystore.lock
+cache.img*
+*.qcow2
+
+# Android Emulator files
+adbkey
+adbkey.pub
+analytics.settings
+emu-last-feature-flags.protobuf
+emu-update-last-check.ini
+modem-nv-ram-*
+Medium_Phone_API_*.ini
+Pixel_*.ini
+AVD.conf
+bootcompleted.ini
+
+# Configuration files
+*.ini
+*.settings
+*.conf
+
 
