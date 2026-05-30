@@ -20,6 +20,7 @@ const achievements = [
     org: "Artira Hackathon",
     icon: Award,
     description: "Selected as a finalist for innovative solutions and technical excellence.",
+    link: "https://consumer-justice-ai.vercel.app/",
   },
 ]
 
