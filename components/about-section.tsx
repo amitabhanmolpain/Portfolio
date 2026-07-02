@@ -15,10 +15,13 @@ export function AboutSection() {
         <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-start">
           <div className="md:col-span-2 space-y-4 md:space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
             <p>
-              I am a Computer Science undergraduate currently in my third year, with a strong passion for coding and building scalable backend systems. I actively develop projects and contribute to GitHub, and I occasionally participate in open-source initiatives to collaborate and learn from the developer community.
+              I am a Computer Science undergraduate currently in my fourth year, with a strong passion for coding and building scalable backend systems. I actively develop projects, contribute to GitHub, and occasionally participate in open-source initiatives to collaborate with and learn from the developer community.
             </p>
             <p>
-              I have taken part in multiple hackathons, including the Bolt Vibe Coding Hackathon and Walmart Sparkathon, and have been a finalist in several competitive hackathons. Currently, I am focusing on learning cloud architecture for backend systems and enjoy collaborating on impactful open-source projects.
+              I recently completed my internship at HCLTech as a Software Development Engineer (SDE) Intern, where I worked on backend development, REST APIs, SQL, and cloud monitoring using AWS CloudWatch.
+            </p>
+            <p>
+              I have won two hackathons and have participated in several well-known competitions, including the Bolt Vibe Coding Hackathon and Walmart Sparkathon. I enjoy solving real-world problems through technology and continuously strive to improve my skills in backend development, cloud technologies, and scalable system design.
             </p>
 
             <div className="pt-4">
