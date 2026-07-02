@@ -19,6 +19,13 @@ const projects: Array<{
   github?: string
 }> = [
   {
+    title: "Policy Agent X",
+    description:
+      "PolicyAgentX is an AI-powered policy simulation platform that analyzes and predicts the socio-economic, demographic, and political impact of government policies using LLMs, RAG pipelines, and multi-agent systems to enable smarter, data-driven governance.",
+    tags: ["AI Agents", "Backend", "LLMs", "RAG", "Multi-Agent Systems"],
+    image: "/policyagentx.png",
+  },
+  {
     title: "VitalEase — Gamified Mental Health Platform — Flask, MongoDB, Redis, WebSockets",
     description:
       `Architected a scalable mental health platform to support users dealing with depression, anxiety, and PTSD through interactive therapeutic games\n– Implemented Redis caching for high-speed score storage, significantly reducing latency\n– Developed secure RESTful APIs with role-based access control using Flask and MongoDB\n– Integrated WebSockets for real-time progress tracking and notifications\n– Optimized media handling using Cloudinary for medical assets`,
