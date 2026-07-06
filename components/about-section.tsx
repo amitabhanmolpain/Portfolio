@@ -21,7 +21,7 @@ export function AboutSection() {
               I recently completed my internship at HCLTech as a Software Development Engineer (SDE) Intern, where I worked on backend development, REST APIs, SQL, and cloud monitoring using AWS CloudWatch.
             </p>
             <p>
-              I have won two hackathons and have participated in several well-known competitions, including the Bolt Vibe Coding Hackathon and Walmart Sparkathon. I enjoy solving real-world problems through technology and continuously strive to improve my skills in backend development, cloud technologies, and scalable system design.
+              I have won two hackathons and have competed in several well-known competitions, including the Bolt Vibe Coding Hackathon and Walmart Sparkathon. I enjoy solving real-world problems through technology and continuously strive to improve my skills in backend development, cloud technologies, and scalable system design.
             </p>
 
             <div className="pt-4">
