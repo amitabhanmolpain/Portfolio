@@ -49,12 +49,12 @@ export function Footer() {
             <h4 className="text-xs font-black uppercase tracking-[0.25em] md:tracking-[0.3em] text-foreground/50">Connect</h4>
             <div className="flex flex-col gap-3 md:gap-4">
               <a
-                href="mailto:ami05tabh@gmail.com"
+                href="mailto:amitabhanmolpain888@gmail.com"
                 className="group p-3 md:p-4 rounded-2xl bg-muted/30 border border-border/50 hover:border-primary/30 transition-all flex items-center justify-between"
               >
                 <div className="flex items-center gap-2 md:gap-3 min-w-0">
                   <Mail className="h-4 md:h-5 w-4 md:w-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
-                  <span className="font-medium text-sm md:text-base truncate">ami05tabh@gmail.com</span>
+                  <span className="font-medium text-sm md:text-base truncate">amitabhanmolpain888@gmail.com</span>
                 </div>
                 <ExternalLink className="h-3 md:h-4 w-3 md:w-4 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
               </a>

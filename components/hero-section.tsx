@@ -126,7 +126,7 @@ export function HeroSection() {
               </a>
 
               <a
-                href="mailto:ami05tabh@gmail.com"
+                href="mailto:amitabhanmolpain888@gmail.com"
                 className="group relative p-3 md:p-4 rounded-2xl bg-muted/30 border border-border/50 hover:border-primary/50 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
