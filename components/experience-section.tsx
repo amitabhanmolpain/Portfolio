@@ -34,7 +34,7 @@ const experiences: Experience[] = [
   {
     company: "HCL Tech",
     role: "SDE Intern",
-    period: "April 2026",
+    period: "April 2026 - July 2026",
     description: "Software Development Engineer Intern at HCL Technologies.",
     achievements: [
       "Built an AI agent using Copilot for the client.",
@@ -45,7 +45,7 @@ const experiences: Experience[] = [
       "Implemented Git-based version control workflows, including branching and pull request reviews, to improve collaboration and code quality.",
     ],
     skills: ["REST API", "SQL", "DATA MIGRATIONS", "COPILOT", "ACID"],
-    tags: ["Internship"],
+    tags: ["Part-time", "Hybrid"],
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6BNVe-7Jaf5vy8z76m2gDxNkqC33Q-gSTDQ&s",
   },
   {
@@ -61,7 +61,7 @@ const experiences: Experience[] = [
       "Collaborated with global developers, following best practices for code review and documentation.",
     ],
     skills: ["Git", "API development", "UI/UX", "Nextjs", "API testing"],
-    tags: ["Remote"],
+    tags: ["Remote", "Part-time"],
     logo: "https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbWZqc20wZGowMDAwaTUwNHVtb2lndTJuIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0=",
   },
   {
