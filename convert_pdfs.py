@@ -5,7 +5,8 @@ import os
 pdf_folder = "public"
 files_to_convert = [
     "Amitabh-web-dev-certificate.pdf",
-    "certificate-Building-with-claude-api.pdf"
+    "certificate-Building-with-claude-api.pdf",
+    "google-cloud-foundations-cert.pdf"
 ]
 
 for pdf_file in files_to_convert:
@@ -27,10 +28,10 @@ for pdf_file in files_to_convert:
         
         # Save the image
         pix.save(output_path)
-        print(f"✓ Converted {pdf_file} to {output_filename}")
+        print(f"OK: Converted {pdf_file} to {output_filename}")
         
         pdf_document.close()
     else:
-        print(f"✗ File not found: {pdf_file}")
+        print(f"Error: File not found: {pdf_file}")
 
 print("\nConversion completed!")
