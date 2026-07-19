@@ -23,7 +23,7 @@ const certifications = [
     issuer: "Anthropic",
     date: "2026",
     description: "Advanced certification in building intelligent applications using the Claude API, including prompt engineering, API integration, and AI-powered workflows.",
-    image: "https://cc.sj-cdn.net/certificate/ca6k4fml7abo/certificate-vgjuqygp36nc-1772970357.jpg?Expires=1774638022&Signature=Ch2AQSsnChrUY9obD0RUFgTRdBqMWx5oRSRg7WNXmjOtyU5cVXTC52nq67RvT0iDGh1PPVLu3m-FeRF6aYbM770dDEQu9r2K4w8JY5MfmijvQyuPzwkc6DxOgp~mHGqCGn8PPU72~OMXQ2MF15GEVglM3n5n7NbLgiyokHhpoQj2Lzn4cinYe9pHMPkqxwLl7Ap3HFst3AV7JERsenuzbL5CGUYYSEp4O7vcmVnyQo9WhnvpTUvP5M7xzrdgKZpmbPHMLxIpPFOD6YY9NwjbmxNBpLkmXN5n8Sh2u3XiykDfIcyPXme9peII8e7oeUZ6rkMTY5apY7nlTu8lXjTPJQ__&Key-Pair-Id=APKAI3B7HFD2VYJQK4MQ",
+    image: "/certificate-Building-with-claude-api.png",
     credential: "/certificate-Building-with-claude-api.pdf",
   },
   {
